@@ -4,7 +4,7 @@ class Helpers
   
   
  def current_user(session_hash) 
-   @user = User.find
+   @user = User.find(session_hash)
  end 
  
  

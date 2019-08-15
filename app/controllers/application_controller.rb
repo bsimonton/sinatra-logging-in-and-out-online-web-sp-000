@@ -6,20 +6,27 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "secret"
   end
 
+
+
   get '/' do
     erb :index
   end
 
+
+
   post '/login' do
   user = User.find_by(username: params["username"] password: params["password"])
-  if user 
+   if user 
     session[:user id] = user.id
     redirect to '/account'
-  else
+   else
     erb :error 
-  end 
-  
+   end 
   end
+
+
+
+
 
   get '/account' do
 

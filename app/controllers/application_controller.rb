@@ -16,7 +16,8 @@ class ApplicationController < Sinatra::Base
     session[:user id] = user.id
     redirect to '/account'
   else
-    erb 
+    erb :error 
+  end 
   
   end
 
